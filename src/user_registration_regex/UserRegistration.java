@@ -32,7 +32,7 @@ public class UserRegistration {
         }
     }
     public void checkPassword(String password){
-        String passwordPattern = "^.{8,}$";
+        String passwordPattern = "^(?=.*[A-Z]).{8,}$";
         boolean b = Pattern.matches(passwordPattern, password);
         if (!b) {
             throw new RuntimeException();

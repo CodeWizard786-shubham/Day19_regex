@@ -38,7 +38,7 @@ public class UserRegistrationTest {
         System.out.println("Enter Password: ");
         String password =sc.nextLine();
         try {
-            user.checkPhoneNumber(password);
+            user.checkPassword(password);
         } catch (Exception e) {
             throw new Exception("Password not correct");
         }
