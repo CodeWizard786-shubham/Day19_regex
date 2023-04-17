@@ -9,7 +9,7 @@ public class UserRegistration {
     if(!b){
         throw new RuntimeException();
     }else{
-        System.out.println("First Name correct");
+        System.out.println("Name correct");
     }
     }
 }

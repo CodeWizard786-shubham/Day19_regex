@@ -14,6 +14,13 @@ public class UserRegistrationTest {
         } catch (Exception e) {
             throw new Exception("First Name not correct");
         }
+        System.out.println("Enter First name");
+        String lastName = sc.nextLine();
+        try {
+            user.checkName(lastName);
+        } catch (Exception e) {
+            throw new Exception("last Name not correct");
+        }
 
     }
 }
