@@ -22,6 +22,22 @@ public class UserRegistration {
             System.out.println("Email Correct : " + email);
         }
     }
-
+    public void checkPhoneNumber(String phoneNumber) throws Exception {
+        String phoneNumberPattern = "^\\d{1,3}\\s[6-9]\\d{2}[\\s-]?\\d{3}[\\s-]?\\d{4}$";
+        boolean b = Pattern.matches(phoneNumberPattern, phoneNumber);
+        if (!b) {
+            throw new RuntimeException();
+        } else {
+            System.out.println("Phone number correct");
+        }
     }
-}
+    public void checkPassword(String password){
+        String passwordPattern = "^.{8,}$";
+        boolean b = Pattern.matches(passwordPattern, password);
+        if (!b) {
+            throw new RuntimeException();
+        } else {
+            System.out.println("Phone number correct");
+        }
+    }
+    }
