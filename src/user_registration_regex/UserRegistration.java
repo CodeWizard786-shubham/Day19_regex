@@ -32,8 +32,8 @@ public class UserRegistration {
         }
     }
     public void checkPassword(String password){
-        String passwordPattern = "^(?=.*[A-Z]).(?=.*[0-9]).{8,}$";
-        boolean b = Pattern.matches(passwordPattern, password);
+        String passwordPattern = "^(?=.*[A-Z]).(?=.*[0-9]).(?=.*[!@#%&])(?!.*[!@#$%^&*].*[!@#$%^&*]).{8,}$";
+        boolean b = Pattern.matches(passwordPattern,password);
         if (!b) {
             throw new RuntimeException();
         } else {
