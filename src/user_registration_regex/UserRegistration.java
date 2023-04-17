@@ -32,12 +32,12 @@ public class UserRegistration {
         }
     }
     public void checkPassword(String password){
-        String passwordPattern = "^(?=.*[A-Z]).{8,}$";
+        String passwordPattern = "^(?=.*[A-Z]).(?=.*[0-9]).{8,}$";
         boolean b = Pattern.matches(passwordPattern, password);
         if (!b) {
             throw new RuntimeException();
         } else {
-            System.out.println("Phone number correct");
+            System.out.println("Password correct");
         }
     }
     }
