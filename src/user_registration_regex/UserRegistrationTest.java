@@ -28,7 +28,13 @@ public class UserRegistrationTest {
         } catch (Exception e) {
             throw new Exception("Email not correct");
         }
-
+        System.out.println("Enter Phone Number(with country code): ");
+        String phoneNumber =sc.nextLine();
+        try {
+            user.checkPhoneNumber(phoneNumber);
+        } catch (Exception e) {
+            throw new Exception("Phone Number not correct");
+        }
 
     }
 }
